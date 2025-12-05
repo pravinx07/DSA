@@ -70,3 +70,21 @@ function countWord(str){
 let str = "hi hello hi world hi"
 
 console.log(countWord(str));
+
+
+function countFreq(str){
+ let map = new Map()
+ let words = str.split(" ")
+
+ for(let word of words){
+    if(map.has(word)){
+        map.set(word, map.get(word) + 1)
+    }else{
+        map.set(word,1)
+    }
+ }
+ return map;
+
+}
+
+console.log(countFreq(str));
