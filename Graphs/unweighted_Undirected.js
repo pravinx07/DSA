@@ -11,10 +11,15 @@ class Graph {
   }
 
   // add an undeiected egde
-  addEdge(v1, v2) {
-    this.adjList[v1].push(v2);
-    this.adjList[v2].push(v1);
-  }
+//   addEdge(v1, v2) {
+//     this.adjList[v1].push(v2);
+//     this.adjList[v2].push(v1);
+//   }
+
+// for Directed Graph
+addEdge(from , to){
+    this.adjList[from].push(to)
+}
 
   printGraph() {
     for (let vertex in this.adjList) {
